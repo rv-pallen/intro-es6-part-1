@@ -1,0 +1,117 @@
+<html>
+<script>
+
+  var fruits = ['banana', 'apple', 'orange'];
+
+  // iterative loop
+  // var freshFruits = [];
+  // for(var i = 0; i <= fruits.length - 1; i++) {
+  // 	freshFruits.push('Fresh ' + fruits[i] + '!');
+  // }
+  //
+  // console.log(freshFruits);
+
+  /**
+   * important to differentiate between what is ES5 and ES6, and how this is all JS
+   * lets talk about which ones are mutating and which are not
+   */
+  // forEach
+  // var freshFruits = [];
+  // fruits.forEach(function(value, index, array) {
+  // 	freshFruits.push('Fresh ' + array[index] + '!');
+  // });
+  //
+  // console.log(freshFruits);
+
+  // map
+  // var freshFruits = fruits.map(function(value, index, array) {
+  // 	return 'Fresh ' + value + '!';
+  // });
+  //
+  // console.log(freshFruits);
+
+  // map + fat arrow
+  // var freshFruits = fruits.map(value => 'Fresh ' + value + '!');
+  //
+  // console.log(freshFruits);
+
+  // sort
+  // lets sort alphabetically
+  // do iterative sort first for comparison
+  // function sortAlpha(a, b) {
+  // 	if(a > b) {
+  // 		return 1;
+  // 	} else if (a < b) {
+  // 		return -1;
+  // 	} else {
+  // 		return 0;
+  // 	}
+  // }
+  //
+  // fruits.sort(sortAlpha);
+  //
+  // console.log(freshFruits);
+
+
+  // filter
+  var fruitBasket = ['banana', 'apple', 'orange'];
+  var noBananas = fruitBasket.filter(fruit => fruit !== 'banana');
+  console.log(noBananas);
+
+  //every
+  // I need to know ALL of my fruit has met the conditions of the farmers market to sell
+  var fruitOrder = [
+    { name: banana, quantity: 1 },
+    { name: apple, quantity: 0 },
+    { name: orange, quantity: 5 },
+    { name: cherry, quantity: 1500 }
+  ];
+
+  var goodToGo = fruitOrder.every(fruit => fruit.quantity >= 5);
+  console.log(goodToGo);
+
+  // some
+  // Supplier will give us discount if we buy at least 100 of ANY fruit
+  var hasDiscount = fruitOrder.some(fruit => fruit.quantity >= 100);
+  console.log(hasDiscount);
+
+  // I feel that most people consider a reduce to be making a collection into a smaller collection
+  // but really we're turning a collection into a single item(which in turn could be another collection)
+
+  // reduce
+  var fruitOrder = [
+    { name: 'banana', quantity: 1 },
+    { name: 'apple', quantity: 0 },
+    { name: 'orange', quantity: 5 },
+    { name: 'cherry', quantity: 1500 }
+  ];
+
+  function reducer(totalQuanity, fruit) {
+    var total = typeof totalQuanity !== 'number'
+      ? totalQuanity.quantity
+      : totalQuanity;
+
+    return total + fruit.quantity
+  };
+
+  var total = fruitOrder.reduce(reducer);
+
+  console.log(total);
+
+  // reduce + default value + fat arrow
+  var fruitOrder = [
+    { name: 'banana', quantity: 1 },
+    { name: 'apple', quantity: 0 },
+    { name: 'orange', quantity: 5 },
+    { name: 'cherry', quantity: 1500 }
+  ];
+
+  var total = fruitOrder.reduce((totalQuanity, fruit) => totalQuanity + fruit.quantity, 0);
+
+  console.log(total);
+
+
+
+</script>
+
+</html>

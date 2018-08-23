@@ -1,0 +1,37 @@
+<html>
+
+<body>
+  <script>
+    const Person = {
+      name: 'Edward',
+      age: '29',
+    };
+
+    const Person2 = {
+      name: 'Paul',
+      age: '33'
+    };
+
+    console.log('My age is ' + Person.age);
+
+    console.log(`My age is ${Person.age}`);
+
+    console.log(`I am ${Person.age > 30 ? ' not' : ''} in my 20s`);
+
+    function in20s(person) {
+      return person.age > 30 ? ' not' : ''
+    }
+
+    console.log(`I am ${in20s(Person)} in my 20s`);
+
+    console.log(`you can do paragraphs without '\n'
+    line 2
+    line 3
+    woohoo!
+    `);
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<html>
+<script>
+  // Destructuring
+
+  const person = {
+    name: { first: 'Bruce', last: "Wayne" },
+    occupation: "Money Maker",
+    social: {
+      hasSocial: true,
+      links: {
+        facebook: 'http://facebook.com/batty45',
+        twitter: 'http://twitter.com/deepVoiceForNoOtherReason',
+      }
+    },
+    faults: ['spends too much money', 'probably uses IE 8', ' Does not work well with a team'],
+    favoritePhrase: "I'm Batman!",
+  }
+
+  // const firstName = person.name.first;
+  // const lastName = person.name.last;
+  // const facebookLink = person.social.links.facebook;
+  // const faults = person.faults;
+
+  const {
+    faults,
+    name: { first: firstName, last: lastName },
+    social: {
+      links: {
+        facebook: facebookLink
+      }
+    }
+  } = person;
+
+
+  console.log({ firstName, lastName, facebookLink, faults });
+
+  // Default Params
+  const { occupation, favoritePhrase } = person;
+
+  const sayFavoritePhrase = (phrase = 'I have nothing to say') => console.log(phrase);
+
+  sayFavoritePhrase(favoritePhrase);
+
+</script>
+
+</html>
