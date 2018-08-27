@@ -4,42 +4,63 @@
   var fruits = ['banana', 'apple', 'orange'];
 
   // iterative loop
+  // for(let i = 0; i < fruits.length; i++){
+  //   fruits[i] = fruits[i].toUpperCase();
+  // }
+
+  // console.log(fruits);
 
   // forEach
+  // fruits.forEach(function(fruit, index) {
+  //   console.log(fruit.toUpperCase());
+  // })
 
   // map
+  const capFruits = fruits.map(function(fruit){
+    return fruit.toUpperCase();
+  })
 
-  // map + fat arrow
+  // console.log(capFruits);
+
 
   // sort
   // lets sort alphabetically
+  fruits.sort();
+
+  // console.log(fruits);
 
   // filter for no bananas
   var fruitBasket = ['banana', 'apple', 'orange'];
 
+  const NoBananasBasket = fruitBasket.filter(function(fruit){
+    return fruit !== 'banana';
+  })
+
+  // console.log(NoBananasBasket);
+
   //every
   // I need to know ALL of my fruit has met the conditions of the farmers market to sell
   var fruitOrder = [
-    { name: banana, quantity: 1 },
-    { name: apple, quantity: 3 },
-    { name: orange, quantity: 5 },
-    { name: cherry, quantity: 1500 }
-  ];
-
-  // some
-  // Supplier will give us discount if we buy at least 100 of ANY fruit
-
-  // reduce
-  var fruitOrder = [
     { name: 'banana', quantity: 1 },
-    { name: 'apple', quantity: 0 },
+    { name: 'apple', quantity: 300 },
     { name: 'orange', quantity: 5 },
     { name: 'cherry', quantity: 1500 }
   ];
 
+  const meetReqs = fruitOrder.every(function(fruit) {
+    return fruit.quantity >= 5;
+  })
 
-    // reduce + default value + fat ar
+  console.log(meetReqs);
 
+  // some
+  // Supplier will give us discount if we buy at least 100 of ANY fruit
+  const canHaveDiscount = fruitOrder.some(function(fruit){
+    console.log(fruit);
+    return fruit.quantity >= 100;
+  });
+
+  console.log(canHaveDiscount);
 
 </script>
 
