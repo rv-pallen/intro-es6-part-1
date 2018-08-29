@@ -4,63 +4,56 @@
   var fruits = ['banana', 'apple', 'orange'];
 
   // iterative loop
-  // for(let i = 0; i < fruits.length; i++){
-  //   fruits[i] = fruits[i].toUpperCase();
-  // }
+  // TODO: Loop over eat fruit and at the word "Fresh to the name";
 
-  // console.log(fruits);
 
+  console.log(freshFruits);
+
+  /**
+   * important to differentiate between what is ES5 and ES6, and how this is all JS
+   * lets talk about which ones are mutating and which are not
+   */
   // forEach
-  // fruits.forEach(function(fruit, index) {
-  //   console.log(fruit.toUpperCase());
-  // })
+  // TODO: Loop over eat fruit and at the word "Fresh to the name";
+
+  // console.log(freshFruits);
 
   // map
-  const capFruits = fruits.map(function(fruit){
-    return fruit.toUpperCase();
-  })
+  // TODO: Loop over eat fruit and at the word "Fresh to the name" and put it in a new array;
 
-  // console.log(capFruits);
+
+  // console.log(freshFruits);
 
 
   // sort
-  // lets sort alphabetically
-  fruits.sort();
+  // TODO: sort alphabetically
 
-  // console.log(fruits);
+  // console.log(freshFruits);
 
-  // filter for no bananas
-  var fruitBasket = ['banana', 'apple', 'orange'];
 
-  const NoBananasBasket = fruitBasket.filter(function(fruit){
-    return fruit !== 'banana';
-  })
+  // filter
+  // TODO: Create a new array that has all the fruits except bananas
 
-  // console.log(NoBananasBasket);
+  // console.log(noBananas);
 
   //every
-  // I need to know ALL of my fruit has met the conditions of the farmers market to sell
+  // I need to know ALL of my fruit has met ALL the conditions of the farmers market to sell
   var fruitOrder = [
-    { name: 'banana', quantity: 1 },
-    { name: 'apple', quantity: 300 },
-    { name: 'orange', quantity: 5 },
-    { name: 'cherry', quantity: 1500 }
+    { name: banana, quantity: 1 },
+    { name: apple, quantity: 300 },
+    { name: orange, quantity: 5 },
+    { name: cherry, quantity: 1500 }
   ];
 
-  const meetReqs = fruitOrder.every(function(fruit) {
-    return fruit.quantity >= 5;
-  })
+  // TODO: create a boolean that say if our fruit order meets all conditions;
 
-  console.log(meetReqs);
+  // console.log(goodToGo);
 
   // some
   // Supplier will give us discount if we buy at least 100 of ANY fruit
-  const canHaveDiscount = fruitOrder.some(function(fruit){
-    console.log(fruit);
-    return fruit.quantity >= 100;
-  });
+  // TODO:  Create a boolean that says if AT LEAST one of our fruist meets the condition
 
-  console.log(canHaveDiscount);
+  // console.log(hasDiscount);
 
 </script>
 

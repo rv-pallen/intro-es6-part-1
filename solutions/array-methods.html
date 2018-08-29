@@ -4,10 +4,12 @@
   var fruits = ['banana', 'apple', 'orange'];
 
   // iterative loop
-  var freshFruits = [];
-  for(var i = 0; i <= fruits.length - 1; i++) {
-  	freshFruits.push('Fresh ' + fruits[i] + '!');
-  }
+  // TODO: Loop over eat fruit and at the word "Fresh to the name";
+
+  // var freshFruits = [];
+  // for (var i = 0; i <= fruits.length - 1; i++) {
+  //   freshFruits.push('Fresh ' + fruits[i] + '!');
+  // }
 
   console.log(freshFruits);
 
@@ -16,48 +18,56 @@
    * lets talk about which ones are mutating and which are not
    */
   // forEach
-  var freshFruits = [];
-  fruits.forEach(function(value, index, array) {
-  	freshFruits.push('Fresh ' + array[index] + '!');
-  });
+  // TODO: Loop over eat fruit and at the word "Fresh to the name";
+  // var freshFruits = [];
+  // fruits.forEach(function (value, index, array) {
+  //   freshFruits.push('Fresh ' + array[index] + '!');
+  // });
 
   console.log(freshFruits);
 
   // map
-  var freshFruits = fruits.map(function(value, index, array) {
-  	return 'Fresh ' + value + '!';
-  });
+  // TODO: Loop over eat fruit and at the word "Fresh to the name" and put it in a new array;
+  // var freshFruits = fruits.map(function (value, index, array) {
+  //   return 'Fresh ' + value + '!';
+  // });
 
   console.log(freshFruits);
 
 
   // sort
-  // lets sort alphabetically
-  fruits.sort();
+  // TODO: sort alphabetically
+  // fruits.sort();
 
   console.log(freshFruits);
 
 
   // filter
-  var fruitBasket = ['banana', 'apple', 'orange'];
-  var noBananas = fruitBasket.filter(fruit => fruit !== 'banana');
+  // TODO: Create a new array that has all the fruits except bananas
+  // var fruitBasket = ['banana', 'apple', 'orange'];
+  // var noBananas = fruitBasket.filter(fruit => fruit !== 'banana');
   console.log(noBananas);
 
   //every
-  // I need to know ALL of my fruit has met the conditions of the farmers market to sell
+  // I need to know ALL of my fruit has met ALL the conditions of the farmers market to sell
   var fruitOrder = [
     { name: banana, quantity: 1 },
-    { name: apple, quantity: 0 },
+    { name: apple, quantity: 300 },
     { name: orange, quantity: 5 },
     { name: cherry, quantity: 1500 }
   ];
 
-  var goodToGo = fruitOrder.every(fruit => fruit.quantity >= 5);
-  console.log(goodToGo);
+  // TODO: create a boolean that say if our fruit order meets all conditions;
+  // var goodToGo = fruitOrder.every(fruit => fruit.quantity >= 5);
+  // console.log(goodToGo);
 
   // some
   // Supplier will give us discount if we buy at least 100 of ANY fruit
-  var hasDiscount = fruitOrder.some(fruit => fruit.quantity >= 100);
+  // TODO:  Create a boolean that says if AT LEAST one of our fruist meets the condition
+  var hasDiscount = fruitOrder.some(function (fruit) {
+    console.log(fruit);
+    return fruit.quantity >= 100;
+  });
   console.log(hasDiscount);
 
 </script>
